@@ -1,0 +1,69 @@
+.pricing6 {
+  font-family: "Montserrat", sans-serif;
+  color: #8d97ad;
+  font-weight: 300;
+}
+
+.pricing6 h1, .pricing6 h2, .pricing6 h3, .pricing6 h4, .pricing6 h5, .pricing6 h6 {
+  color: #3e4555;
+}
+
+.pricing6 .font-weight-medium {
+  font-weight: 500;
+}
+
+.pricing6 h5 {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.pricing6 .subtitle {
+  color: #8d97ad;
+  line-height: 24px;
+}
+
+.pricing6 .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.pricing6 .price-box sup {
+  top: -20px;
+  font-size: 16px;
+}
+
+.pricing6 .price-box .display-5 {
+  line-height: 58px;
+  font-size: 3rem;
+}
+
+.pricing6 .btn-info-gradiant {
+  background: #188ef4;
+  background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+  background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+  background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+  background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+}
+
+.pricing6 .btn-info-gradiant:hover {
+  background: #316ce8;
+  background: -webkit-linear-gradient(legacy-direction(to right), #316ce8 0%, #188ef4 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#316ce8), to(#188ef4));
+  background: -webkit-linear-gradient(left, #316ce8 0%, #188ef4 100%);
+  background: -o-linear-gradient(left, #316ce8 0%, #188ef4 100%);
+  background: linear-gradient(to right, #316ce8 0%, #188ef4 100%);
+}
+
+.pricing6 .text-info {
+  color: #188ef4 !important;
+}
+
+.pricing6 .badge-danger {
+  background-color: #ff4d7e;
+}
+
+.pricing6 .font-14 {
+  font-size: 14px;
+}
+
