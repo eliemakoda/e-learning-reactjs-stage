@@ -4,7 +4,12 @@
   font-weight: 300;
 }
 
-.pricing6 h1, .pricing6 h2, .pricing6 h3, .pricing6 h4, .pricing6 h5, .pricing6 h6 {
+.pricing6 h1,
+.pricing6 h2,
+.pricing6 h3,
+.pricing6 h4,
+.pricing6 h5,
+.pricing6 h6 {
   color: #3e4555;
 }
 
@@ -61,9 +66,9 @@
 
 .pricing6 .badge-danger {
   background-color: #ff4d7e;
+  padding-left: "50%";
 }
 
 .pricing6 .font-14 {
   font-size: 14px;
 }
-

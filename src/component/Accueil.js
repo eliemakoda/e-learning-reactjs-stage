@@ -7,10 +7,10 @@ import Team from "./Team";
 import Footer from "./Footer";
 import './assets/bootstrap/css/bootstrap.min.css';
 import './assets/fonts/font-awesome.min.css';
-import './assets/js/agency';
-import './assets/js/script.min';
-import './assets/js/agency';
-import './assets/js/script.min';
+//import './assets/js/agency';
+//import './assets/js/script.min';
+//import './assets/js/agency';
+//import './assets/js/script.min';
 import './assets/css/Article-List.css';
 import './assets/css/Pricing-Grid.css';
 import './assets/css/Roboto.css';
@@ -39,7 +39,9 @@ function Accueil() {
 			</nav>
 			<header className="masthead"
 				style={ {
-					backgroundImage: `url(${img})`
+					backgroundImage: `url(${img})`,
+					paddingBottom: "0%",
+					marginBottom: "0%"
 
 				} }>
 				<div className="container">

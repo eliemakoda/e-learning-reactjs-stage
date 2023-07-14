@@ -61,6 +61,10 @@
 	--bs-body-bg: #fff
 }
 
+body {
+	background-color: #ced4da;
+}
+
 *,
 *::before,
 *::after {

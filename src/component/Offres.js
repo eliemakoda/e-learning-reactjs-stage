@@ -15,7 +15,6 @@ function Offres() {
 						</div>
 					</div>
 					<div className="row mt-4">
-
 						<div className="col-md-6">
 							<div className="card card-shadow border-0 mb-4">
 								<div className="card-body p-4">
