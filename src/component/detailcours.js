@@ -1,49 +1,82 @@
 import img from './assets/img/study-group-african-people.jpg';
-import video from './assets/img/emako exercice.mp4'
+import video from './assets/img/emako exercice.mp4';
+import './coursBoots/css/bootstrap.min.css';
+//import './coursBoots/js/bootstrap.min';
 import './detail.css';
+import { Link } from 'react-router-dom';
+import Accueil from './Accueil';
+const GriDetails=(props) => {
+	return (
+		<div class="col-lg-3 col-md-4 col-sm-12">
+			<div class="card">
+				<div class="file">
+					<a href="javascript:void(0);">
+						<div class="icon">
+							<video height="240" width="100%" controls>
+								<source src={ props.video } type="video/mp4" />
+							</video>
+						</div>
+						<div class="file-name">
+							<p class="m-b-5 text-muted">{ props.name }</p>
+							<small>{ props.teacherName }<span className="date text-muted">{ props.chapter }</span></small>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	)
+}
+const Nav=() => {
+	return (<nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+		<div className="container"><a className="navbar-brand" href="#page-top"><strong>Nohellef&nbsp;</strong><br /></a><button
+			data-bs-toggle="collapse" data-bs-target="#navbarResponsive" className="navbar-toggler navbar-toggler-right"
+			type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+				className="fa fa-bars"></i></button>
+			<div className="collapse navbar-collapse" id="navbarResponsive">
+				<ul className="navbar-nav ms-auto text-uppercase">
+					<li className="nav-item"><Link className="nav-link" to='/'>Accueil</Link></li>
+				</ul>
+			</div>
+		</div>
+	</nav>)
+}
 export default function detailcours() {
 	return (
 		<>
-			<div className="container">
-				<h1 className="my-4">developpement javasript</h1>
-				<div className="row">
-					<div className="col-md-8"><img className="img-fluid" src={ img } alt="Alt Text" /></div>
-					<div className="col-md-4">
-						<h3 className="my-3">Description du cours</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-						<h3 className="my-3">Prerequis cours</h3>
-						<ul className="list-unstyled">
-							<li>Lorem Ipsum</li>
-							<li>Consectetur</li>
-							<li>Dolor Sit Amet</li>
-							<li>Adipiscing Elit</li>
-						</ul>
-					</div>
-				</div>
-				<h3 className="my-4" id="video">Videos</h3>
-				<div className="row">
-					<div className="col-sm-6 col-md-3 mb-4 video"><a href="#video">
-						<video width="320" height="240" controls>
-							<source src={ video } type="video/mp4" />
-						</video>
-					</a>chapitre x les classes	</div>
-					<div className="col-sm-6 col-md-3 mb-4 video"><a href="#video">
-						<video width="320" height="240" controls>
-							<source src={ video } type="video/mp4" />
-						</video>
-					</a>chapitre x les espaces de noms</div>
-					<div className="col-sm-6 col-md-3 mb-4 video"><a href="#video">
-						<video width="320" height="240" controls>
-							<source src={ video } type="video/mp4" />
-						</video>
-					</a>chapitre x les variables</div>
-					<div className="col-sm-6 col-md-3 mb-4 video"><a href="#video">
-						<video width="320" height="240" controls>
-							<source src={ video } type="video/mp4" />
+			<Nav />
+			<div id="main-content" className="file_manager">
+				<div className="container">
+					<div className="row clearfix">
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
+						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
 
-						</video>
-					</a>
-						chapitre x les fonctions
 					</div>
 				</div>
 			</div>
