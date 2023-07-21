@@ -1,0 +1,172 @@
+.my-nav{
+    position:fixed;
+    width:100%;
+    padding:10px 0px;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+
+    .nav-items{
+        display:flex;
+        flex-wrap:wrap;
+        flex:1 1 100%;
+        max-width:100%;
+        width:100%;
+
+        @media (max-width: 768px){
+            align-items:center;
+        }
+
+        .logo{
+            width: 30%;
+            max-width:30%;
+            flex:1 1 30%;
+            padding:10px 15px;
+            @media screen and(max-width:767.98px){
+                width: 100%;
+                max-width:100%;
+                flex:1 1 100%;
+            }
+            .fixed-scrol{
+                display:none;
+            }
+
+            .hide-scrol{
+                  display:block;
+              }
+            
+        }
+
+        .menu-items{
+            width:70%;
+            max-width:70%;
+            flex:1 1 70%;
+            position: relative;
+
+            @media screen and(max-width:767.98px){
+                width: 100%;
+                max-width:100%;
+                flex:1 1 100%;
+            }
+
+            .menu{
+                display:block;
+                float:right;
+                padding:10px 15px;
+
+                @media screen and(max-width:767.98px){
+                    float: left;
+                    display:none;
+                    background:$color-main;
+                    width:100%;
+                    position: relative;
+                }
+                ul{
+                    li{
+                        display:inline-block;
+                        padding:10px;
+                        font-size: 16px;
+                        font-weight: 500;
+
+                        @media screen and(max-width:767.98px){
+                            display:block;
+                            padding:10px 0px;
+                        }
+
+                        @media (max-width:992px) and (min-width:768px){
+                            padding:10px 2px;
+                        }
+
+                        a{
+                            color:$color-use;
+                            padding:10px;
+                            text-transform:uppercase;
+                            transition:0.5s;
+
+                            &:hover{
+                                color:$sup-color;
+                            }
+
+                            @media screen and(max-width:767.98px){
+                                padding:10px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.og-hf {
+    background:$color-main;
+    position: fixed;
+    height:70px;
+    z-index:999;
+    width:100%;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+
+    .my-nav{
+        padding:0px;
+
+        .nav-items{
+          .logo{
+              .fixed-scrol{
+                  display:block;
+              }
+
+              .hide-scrol{
+                  display:none;
+              }
+          }
+
+          .menu-toggle::before{
+              color:$color-use;
+          }
+        }
+    }
+
+}
+
+.menu-toggle {
+    display:none;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    visibility: hidden;
+    z-index:99;
+    position: absolute;
+    right:0;
+    top:15px;
+}
+
+.menu-toggle::before {
+    position: absolute;
+    content: "\f0c9";
+    font-size: 26px;
+    color:$color-main;
+    font-family: "Font Awesome 5 Pro";
+}
+
+.menu-toggle.active::before {
+    content: "\f00d";
+}
+
+@media (max-width: 767.98px){
+    .menu-toggle {
+    	visibility: visible;
+    	opacity: 1;
+    	display:block;
+    }
+
+    .menu.active {
+        display: block !important;
+        position: relative;
+        top:0;
+    }
+}
