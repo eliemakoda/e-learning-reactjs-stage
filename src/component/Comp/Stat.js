@@ -1,5 +1,15 @@
 import React from 'react'
 import imx from "../assets/images/slider/2.png"
+const GridStat=(props) => {
+	return (
+		<li>
+			<div className="_lk_bg_cd">
+				<div className="counting" data-count={ props.number }>{ props.number }</div>
+				<h5>{ props.description }</h5>
+			</div>
+		</li>
+	)
+}
 export default function Stat() {
 	return (
 		<section className="bg-02">
@@ -18,26 +28,18 @@ export default function Stat() {
 								ad corporis earum architecto omnis aspernatur ipsum!</p>
 
 							<ol>
-								<li>
-									<div className="_lk_bg_cd">
-										<div className="counting" data-count="100">100</div>
-										<h5>Active Cources</h5>
-									</div>
-								</li>
-
-								<li>
-									<div className="_lk_bg_cd">
-										<div className="counting" data-count="130">130</div>
-										<h5>Student Learning</h5>
-									</div>
-								</li>
-
-								<li>
-									<div className="_lk_bg_cd">
-										<div className="counting" data-count="20">20</div>
-										<h5>Free Cources</h5>
-									</div>
-								</li>
+								<GridStat
+									number={ 100 }
+									description="Active Courses"
+								/>
+								<GridStat
+									number={ 130 }
+									description="Student Learning"
+								/>
+								<GridStat
+									number={ 20 }
+									description="Free Courses"
+								/>
 							</ol>
 						</div>
 					</div>

@@ -12,6 +12,18 @@ import "../assets/css/all.min.css";
 import "../assets/css/owl.carousel.min.css";
 import "../assets/css/owl.carousel.css";
 import "../assets/css/style.css";
+const GridCours=(props) => {
+	return (
+		<div className="col-md-4 mb-4">
+			<div className="border rounded text-center p-4">
+				<img src={ props.img } alt="" width="75%" />
+				<h4 className="fw-bolder my-3">{ props.title } </h4>
+				<i>{ props.teacherName } </i>
+				<p className="fs-6">{ props.courseDescription }</p>
+			</div>
+		</div>
+	)
+}
 export default function Cours() {
 	return (
 		<>
@@ -39,38 +51,35 @@ export default function Cours() {
 					</div>
 					<div className="container-xl max-1200">
 						<div className="row">
-							<div className="col-md-4 mb-4">
-								<div className="border rounded text-center p-4">
-									<img src={ im1 } alt="" />
-									<h4 className="fw-bolder my-3">Developpement javascript </h4>
-									<i>by ing Elie </i>
-									<p className="fs-6">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-								</div>
-							</div>
-							<div className="col-md-4 mb-4">
-								<div className="border rounded text-center p-4">
-									<img src={ im2 } alt="" />
-									<h4 className="fw-bolder my-3">Developpement javascript </h4>
-									<i>by ing Elie </i>
-									<p className="fs-6">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-								</div>
-							</div>
-							<div className="col-md-4 mb-4">
-								<div className="border rounded text-center p-4">
-									<img src={ im3 } alt="" />
-									<h4 className="fw-bolder my-3">Developpement javascript </h4>
-									<i>by ing Elie </i>
-									<p className="fs-6">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-								</div>
-							</div>
-							<div className="col-md-4 mb-4">
-								<div className="border rounded text-center p-4">
-									<img src={ im4 } alt="" />
-									<h4 className="fw-bolder my-3">Developpement javascript </h4>
-									<i>by ing Elie </i>
-									<p className="fs-6">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-								</div>
-							</div>
+							<GridCours
+								img={ im1 }
+								title="Developpement javascript"
+								teacherName="by ing Elie"
+								courseDescription="Lorem ipsum dolor sit amet, 
+								consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+							/>
+							<GridCours
+								img={ im2 }
+								title="Developpement javascript"
+								teacherName="by ing Elie"
+								courseDescription="Lorem ipsum dolor sit amet, 
+								consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+							/>
+							<GridCours
+								img={ im3 }
+								title="Developpement javascript"
+								teacherName="by ing Elie"
+								courseDescription="Lorem ipsum dolor sit amet, 
+								consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+							/>
+							<GridCours
+								img={ im4 }
+								title="Developpement javascript"
+								teacherName="by ing Elie"
+								courseDescription="Lorem ipsum dolor sit amet, 
+								consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+							/>
+
 						</div>
 					</div>
 				</div>
