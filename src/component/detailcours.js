@@ -1,85 +1,37 @@
-import img from './assets/img/study-group-african-people.jpg';
-import video from './assets/img/emako exercice.mp4';
-import './coursBoots/css/bootstrap.min.css';
-//import './coursBoots/js/bootstrap.min';
-import './detail.css';
-import { Link } from 'react-router-dom';
-import Accueil from './Accueil';
-const GriDetails=(props) => {
-	return (
-		<div class="col-lg-3 col-md-4 col-sm-12">
-			<div class="card">
-				<div class="file">
-					<a href="javascript:void(0);">
-						<div class="icon">
-							<video height="240" width="100%" controls>
-								<source src={ props.video } type="video/mp4" />
-							</video>
-						</div>
-						<div class="file-name">
-							<p class="m-b-5 text-muted">{ props.name }</p>
-							<small>{ props.teacherName }<span className="date text-muted">{ props.chapter }</span></small>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	)
-}
-const Nav=() => {
-	return (<nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
-		<div className="container"><a className="navbar-brand" href="#page-top"><strong>Nohellef&nbsp;</strong><br /></a><button
-			data-bs-toggle="collapse" data-bs-target="#navbarResponsive" className="navbar-toggler navbar-toggler-right"
-			type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
-				className="fa fa-bars"></i></button>
-			<div className="collapse navbar-collapse" id="navbarResponsive">
-				<ul className="navbar-nav ms-auto text-uppercase">
-					<li className="nav-item"><Link className="nav-link" to='/'>Accueil</Link></li>
-				</ul>
-			</div>
-		</div>
-	</nav>)
-}
-export default function detailcours() {
+import React from "react";
+import './det.css';
+import { useState } from "react";
+function Detailcours() {
+	const [cocher, noncocher]=useState(false);
+	const OnchangeInput=() => {
+		noncocher(!cocher);
+	}
 	return (
 		<>
-			<Nav />
-			<div id="main-content" className="file_manager">
-				<div className="container">
-					<div className="row clearfix">
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-						<GriDetails name="Introduction au lanagage c" video={ video } teacherName="napoleon Hill " chapter="chapitre 1: les constantes " />
-
-					</div>
-				</div>
+			<div id="faq">
+				<h1>Nos cours </h1>
+				<ul>
+					<li>
+						<input type="checkbox" checked={ cocher } onChange={ OnchangeInput } />
+						<i></i>
+						<h2>Introduction au langage consectetur</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis iusto voluptatum doloribus rem, qui nesciunt labore tempore fugit iste deserunt incidunt error provident repudiandae laudantium quo ipsa unde perspiciatis, nihil autem distinctio! Deserunt, aspernatur.</p>
+					</li>
+					<li>
+						<input type="checkbox" checked={ cocher } onChange={ OnchangeInput } />
+						<i></i>
+						<h2>Base de la programmation orientée objet</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi, quia provident facere recusandae itaque assumenda fuga veniam dicta earum dolorem architecto facilis nisi pariatur.</p>
+					</li>
+					<li>
+						<input type="checkbox" checked={ cocher } onChange={ OnchangeInput } />
+						<i></i>
+						<h2>developpement api rest</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas placeat assumenda mollitia magni consequatur dolorum, quod nihil distinctio aperiam officia alias! Voluptate dolore ex officiis sit, magnam non a, eligendi pariatur aut, earum dolores tenetur ipsam id illo deleniti. Laudantium deserunt eaque ipsam voluptatum consequuntur voluptatibus sed minima ad accusamus debitis eos similique laboriosam, molestiae? Consequatur neque tempore quis. Eligendi, in ut aspernatur esse nesciunt libero.</p>
+					</li>
+				</ul>
 			</div>
 		</>
 	);
 }
+export default Detailcours;
